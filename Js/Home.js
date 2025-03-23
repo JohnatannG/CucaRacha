@@ -7,7 +7,7 @@ let tabuleiro = []
 let movimentos = 0
 
 voltarPagina.addEventListener('click', function(){
-    window.location.href = 'http://127.0.0.1:5501/index.html'
+    window.location.href = 'https://cuca-racha.vercel.app/'
 });
 
 gerarNumerosAletorios();
