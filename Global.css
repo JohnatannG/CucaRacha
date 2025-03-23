@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins'
+}
+
+:root{
+    --colorPrimary: #2F50FA;
+    --colorPrimaryHover: #2947d8;
+    --colorWhite: #ffffff;
+    --colorBlack: #000000;
+}
+
+body{
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23ffffffff'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='%23f4f4f4ff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+#comecarJogo, #voltarPagina{
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.6rem 1rem;
+
+    font-size: 0.8rem;
+
+    transition: .2s;
+    
+    &:hover{
+        background-color: var(--colorPrimaryHover);
+    }
+}
+
+#resetarJogo{
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+
+    font-size: 0.8rem;
+
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: .2rem;
+
+    transition: .2s;
+
+    &:hover{
+        background-color: var(--colorPrimaryHover);
+    }
+}
+
+#Jogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ContainerJogo {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    width: 23rem; 
+    height: 23rem;
+
+    border-radius: 0.3rem;
+}
+
+.peca{
+    background-color: var(--colorPrimary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    border-radius: 0.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: .2s;
+    &:hover{
+        scale: 1.1;
+    }
+}
+
+.fs-logo{
+    font-size: 1.3rem;
+}
+.w-logo{
+    width: 3rem;
+}
+
+@media (max-width: 768px) {
+    .fs-logo{
+        font-size: 1rem;
+    }
+    .w-logo{
+        width: 2rem;
+    }
+    #ComecarJogo, #VoltarPagina, #resetarJogo{
+        font-size: 0.7rem;
+    }
+
+}
